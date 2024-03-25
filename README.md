@@ -1,3 +1,1 @@
-# flutter_test_linux
-
-A new Flutter project.
+Project จบของทางมหาลัยที่ทำร่วมกับ hardware ที่เป็นปืนเลเซอร์
