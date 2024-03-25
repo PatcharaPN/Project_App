@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_finalproject/core/theme/app_pallete.dart';
 
-class NotiButton extends StatelessWidget {
-  const NotiButton({super.key});
+class LanguageButton extends StatelessWidget {
+  const LanguageButton({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -13,7 +13,7 @@ class NotiButton extends StatelessWidget {
           backgroundColor: AppPallete.transparentColor),
       onPressed: () {},
       child: Padding(
-        padding: EdgeInsets.symmetric(vertical: 10),
+        padding: EdgeInsets.symmetric(vertical:10 ),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
@@ -22,10 +22,10 @@ class NotiButton extends StatelessWidget {
               height: 70,
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(50),
-                  color: AppPallete.backgroundNav),
+                  color: AppPallete.backgroundlanguage),
               child: const Icon(
-                Icons.notifications_none_rounded,
-                color: AppPallete.backgroundNavIcon,
+                Icons.language,
+                color: AppPallete.backgroundIcon,
                 size: 50,
               ),
             ),
@@ -36,12 +36,12 @@ class NotiButton extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  "Notification",
+                  "Language",
                   style:
                       TextStyle(fontSize: 20, fontWeight: FontWeight.bold,color: AppPallete.whiteColor),
                 ),
                 Text(
-                  "Mute or Push Notification",
+                  "Change language,region",
                   style: TextStyle(
                       fontWeight: FontWeight.bold,
                       color: AppPallete.subtitlecolor,

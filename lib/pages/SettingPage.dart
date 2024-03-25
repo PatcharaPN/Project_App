@@ -3,6 +3,7 @@ import 'package:flutter/widgets.dart';
 import 'package:flutter_finalproject/core/theme/app_pallete.dart';
 import 'package:flutter_finalproject/data/demoDB.dart';
 import 'package:flutter_finalproject/data/userdb.dart';
+import 'package:flutter_finalproject/presentation/buttons/languageBUtton.dart';
 import 'package:flutter_finalproject/presentation/buttons/notificationbutton.dart';
 
 class SettingsPage extends StatelessWidget {
@@ -101,12 +102,15 @@ class SettingsPage extends StatelessWidget {
                   AppPallete.buttongradient1
                 ], begin: Alignment.topCenter, end: Alignment.bottomCenter),
               ),
-              child: Column(
-                children: [
-                  NotiButton(),
-                  NotiButton(),
-                  NotiButton(),
-                ],
+              child:  const Padding(
+                padding: EdgeInsets.symmetric(vertical: 15 ),
+                child: Column(
+                  children: [
+                    NotiButton(),
+                    SizedBox(height: 15,),
+                    LanguageButton(),
+                  ],
+                ),
               ),
             ),
           )

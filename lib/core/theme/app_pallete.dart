@@ -29,4 +29,7 @@ class AppPallete {
   static const Color backgroundAbout = Color(0xFFFFC735);
   static const Color backgroundNavIcon = Color(0xFF00D1FF);
   static const Color subtitlecolor = Color(0xFF1CADFF);
+  static const Color backgroundlanguage = Color.fromARGB(106, 28, 255, 130);
+  
+  static const Color backgroundIcon = Color.fromARGB(255, 28, 255, 130);
 }
