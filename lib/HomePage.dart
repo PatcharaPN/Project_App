@@ -39,32 +39,35 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        elevation: 0,
-        leading: IconButton(
-          onPressed: () {},
-          icon: const Icon(
-            Icons.notifications_none_rounded,
-            color: AppPallete.iconColor,
-            size: 40,
+      appBar: PreferredSize(
+        preferredSize: const Size.fromHeight(160),
+        child: AppBar(
+          elevation: 0,
+          leading: IconButton(
+            onPressed: () {},
+            icon: const Icon(
+              Icons.notifications_none_rounded,
+              color: AppPallete.iconColor,
+              size: 40,
+            ),
           ),
-        ),
-        title: Padding(
-          padding: const EdgeInsets.only(left: 175.0),
-          child: Text(currentUser.username),
-        ),
-        actions: [
-          CircleAvatar(
-            backgroundImage: NetworkImage(currentUser.userPicture),
-            radius: 40,
-          )
-        ],
-        bottom: PreferredSize(
-          preferredSize: const Size.fromHeight(100),
-          child: SearchbarWidget(
-            //Searchbar Widget
-            hint: "search settings, etc",
-            onChanged: (value) {},
+          title: Padding(
+            padding: const EdgeInsets.only(left: 125.0),
+            child: Text(currentUser.username),
+          ),
+          actions: [
+            CircleAvatar(
+              backgroundImage: NetworkImage(currentUser.userPicture),
+              radius: 40,
+            )
+          ],
+          bottom: PreferredSize(
+            preferredSize: const Size.fromHeight(100),
+            child: SearchbarWidget(
+              //Searchbar Widget
+              hint: "search settings, etc",
+              onChanged: (value) {},
+            ),
           ),
         ),
       ),

@@ -3,6 +3,8 @@ import 'package:flutter/widgets.dart';
 import 'package:flutter_finalproject/core/theme/app_pallete.dart';
 import 'package:flutter_finalproject/data/demoDB.dart';
 import 'package:flutter_finalproject/data/userdb.dart';
+import 'package:flutter_finalproject/presentation/buttons/aboutbutton.dart';
+import 'package:flutter_finalproject/presentation/buttons/accountbutton.dart';
 import 'package:flutter_finalproject/presentation/buttons/languageBUtton.dart';
 import 'package:flutter_finalproject/presentation/buttons/notificationbutton.dart';
 
@@ -26,64 +28,7 @@ class SettingsPage extends StatelessWidget {
               style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
             ),
           ),
-          Center(
-            child: Container(
-              width: 350,
-              height: 110,
-              decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(40),
-                  gradient: const LinearGradient(colors: [
-                    AppPallete.buttongradient2,
-                    AppPallete.buttongradient1,
-                  ], begin: Alignment.topCenter, end: Alignment.bottomCenter)),
-              child: Row(
-                children: [
-                  Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: CircleAvatar(
-                      backgroundImage: NetworkImage(
-                        userModel.userPicture,
-                      ),
-                      radius: 40,
-                    ),
-                  ),
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Padding(
-                        padding: const EdgeInsets.only(left: 12.0),
-                        child: Text(
-                          userModel.username,
-                          style: const TextStyle(
-                              fontSize: 20, fontWeight: FontWeight.bold),
-                        ),
-                      ),
-                      TextButton(
-                        onPressed: () {},
-                        child: const Text("View Account"),
-                      ),
-                    ],
-                  ),
-                  const SizedBox(
-                    width: 50,
-                  ),
-                  ElevatedButton(
-                    onPressed: () {},
-                    style: ElevatedButton.styleFrom(
-                        backgroundColor: AppPallete.logoutButton),
-                    child: const Text(
-                      "Log out",
-                      style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          fontSize: 15,
-                          color: AppPallete.whiteColor),
-                    ),
-                  )
-                ],
-              ),
-            ),
-          ),
+          UserButton(dbDemo: dbDemo, userDB: userDB),
           const Padding(
             padding: EdgeInsets.all(20.0),
             child: Text(
@@ -93,7 +38,7 @@ class SettingsPage extends StatelessWidget {
           ),
           Center(
             child: Container(
-              width: 350,
+              width: 320,
               height: 320,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(20),
@@ -102,13 +47,19 @@ class SettingsPage extends StatelessWidget {
                   AppPallete.buttongradient1
                 ], begin: Alignment.topCenter, end: Alignment.bottomCenter),
               ),
-              child:  const Padding(
-                padding: EdgeInsets.symmetric(vertical: 15 ),
+              child: const Padding(
+                padding: EdgeInsets.symmetric(vertical: 15),
                 child: Column(
                   children: [
                     NotiButton(),
-                    SizedBox(height: 15,),
+                    SizedBox(
+                      height: 10,
+                    ),
                     LanguageButton(),
+                    SizedBox(
+                      height: 10,
+                    ),
+                    AboutButton()
                   ],
                 ),
               ),
