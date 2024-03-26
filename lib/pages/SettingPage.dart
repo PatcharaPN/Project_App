@@ -16,7 +16,6 @@ class SettingsPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final userModel = userDB.modelDB.first;
     return Scaffold(
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,

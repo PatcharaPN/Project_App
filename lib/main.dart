@@ -4,17 +4,18 @@ import 'package:flutter_finalproject/core/theme/ThemeApp.dart';
 import 'package:flutter_finalproject/data/demoDB.dart';
 import 'package:flutter_finalproject/data/userdb.dart';
 import 'package:flutter_finalproject/presentation/pages/config_page.dart';
+import 'package:flutter_finalproject/presentation/pages/searchpage.dart';
 import 'package:flutter_finalproject/presentation/pages/settingpage.dart';
 
 import 'presentation/pages/signin_page.dart';
 import 'presentation/pages/signup_page.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 bool checkLoggedInStatus() {
-  return false;
+  return true;
 }
 
 class MyApp extends StatelessWidget {
@@ -40,6 +41,9 @@ class MyApp extends StatelessWidget {
         '/signuppage': (context) => const SignUpPage(),
         '/settingpage': (context) => const SettingPage(),
         '/configpage': (context) => const ConfigPage(),
+        '/searchpage': (context) => const Searchpage(
+              hint: "Search setting,etc",
+            ),
       },
     );
   }

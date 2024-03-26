@@ -66,7 +66,6 @@ class _HomePageState extends State<HomePage> {
             child: SearchbarWidget(
               //Searchbar Widget
               hint: "search settings, etc",
-              onChanged: (value) {},
             ),
           ),
         ),
